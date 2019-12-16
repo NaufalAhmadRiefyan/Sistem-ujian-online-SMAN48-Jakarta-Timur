@@ -1,0 +1,156 @@
+html {
+	position: relative;
+}
+body{
+	background-image: url(../account/asset/img/2.jpg);
+	background-repeat: repeat;
+	background-color: rgb(255, 255, 255);
+    margin-bottom: 120px;
+}
+
+.main-image
+{
+	height: 250px;
+	margin: 10% 39% ;
+}
+
+.main h3
+{
+	position: relative;
+	bottom: 80px;
+	left: 20px;
+}
+
+.button
+{
+	position: relative;
+	left: 250px;
+	width: 180px;
+	margin-left: 100px;
+	margin-top: -80px;
+	border-radius: 12px;
+}
+
+
+
+.button:first-child 
+{
+	background-color: rgb(34, 91, 182);
+	border: none;
+	transition: .5s;
+}
+
+.button:first-child:hover
+{
+	background-color: rgb(14, 36, 70);
+	border: none;
+	color: rgb(255, 255, 255);	
+}
+
+.button:last-child 
+{
+	background-color: rgb(5, 22, 117);
+	border: none;
+	transition: .5s;
+}
+
+.button:last-child:hover
+{
+	background-color: rgb(3, 112, 185);
+	border: none;
+}
+
+/* portrait phone */
+@media (max-width: 575.98px) {  
+	body{
+		position: relative;
+		background-image: url(../account/asset/img/2.jpg);
+		background-repeat: none;
+		background-color: #A6BDB1;
+		margin-bottom: 120px;
+	}
+	.main-image
+	{
+		height: 100px;
+		margin: 10% 39% ;
+	}
+	
+	.main h3:first-child
+	{
+		font-size: 24px;
+		font-weight: bold;
+		position: relative;
+		top: 50px;
+		left: 20px;
+	}
+
+	.main h3:last-child
+	{
+		font-size: 24px;
+		font-weight: bold;
+		position: relative;
+		top: 50px;
+		left: 20px;
+	}
+	
+	.button
+	{
+		position: relative;
+		left: -70px;
+		top: 150px;
+		width: 220px;
+		height: 40px;
+		margin-top: -10px;
+		border-radius: 12px;
+	}
+
+	.button:first-child 
+	{
+		background-color: rgb(43, 77, 133);
+		border: none;
+		transition: .5s;
+		top: 100px;
+	}
+
+	.button:last-child 
+	{
+		background-color: rgb(5, 22, 117);
+		border: none;
+		transition: .5s;
+		position: relative;
+	}
+}
+
+
+/* Login */	
+.navbar-brand
+{
+	position: relative;
+	left: 50px;
+}
+
+.panel-body
+{
+	margin: 2px;
+	position: relative;
+}
+
+.login{
+	box-shadow: -9px 9px 6px rgb(221, 216, 209);
+	border-radius: 15px;
+	width: 1000px;
+	height: 350px;
+	margin-bottom: 100px;
+	background-color: rgb(255, 255, 255);
+}
+.container
+{
+	margin-top: 50px;
+}
+
+.back-button
+{
+	position: relative;
+	top: 10px;
+}
+
