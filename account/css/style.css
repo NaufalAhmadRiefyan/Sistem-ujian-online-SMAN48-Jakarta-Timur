@@ -1,0 +1,23 @@
+html
+{
+	font: 24px/28px, arial;
+}
+.carousel-caption h4
+{
+	margin-top: -250px;
+}
+
+.about
+{
+	position: relative;
+	bottom: 0;
+	bottom: 0;
+}
+.carousel-caption h4
+{
+	font-size: 32px;
+}
+
+.carousel-caption p{
+	font-size: 18px;
+}
