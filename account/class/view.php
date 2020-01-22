@@ -61,16 +61,17 @@ $nama_siswa = $_SESSION['nama_siswa'];
   </head>
   <style>
     .card-body{
-      font-family: nunito sans; 
+      font-family: nunito sans;
+
     }
     .input{
         font-family: nunito sans;
     }
     .gambar{
-      width:600px;
+      height: 10%;
     }
   </style>
-  <body style="background-image: url(../asset/img/9.jpg);">
+  <body style="background-color: rgba(0, 90, 20, .4);">
    
   <!-- navigation menu -->
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -120,7 +121,7 @@ $nama_siswa = $_SESSION['nama_siswa'];
   $n = @$_GET['n'];
   $eid = @$_GET['eid'];
   $q = mysqli_query($conn, "SELECT * FROM pertanyaan_soal WHERE eid = '$eid' AND sn = '$n'");
-  echo '<div class="container mt-3"><div class="card-body col-md-12" style="background-color:#FFFFFF; border: 3px solid black; border-radius: 65px 5px 75px 5px">';
+  echo '<div class="container mt-3"><div class="card-body col-md-12" style="background-color:#FFFFFF; border: 3px solid black; border-radius: 10px 10px px 5px">';
   while($row = mysqli_fetch_assoc($q))
   {
     $gambar = $row['gambar'];
@@ -131,17 +132,21 @@ $nama_siswa = $_SESSION['nama_siswa'];
      <p style="font-family: nunito sans;">'.$qns.'</p>';
     }else{
     echo '<b>Soal Ke &nbsp;'.$n.'&nbsp;</b></br>
-    <img src="../../staff/img/'.$gambar.'" class="rounded gambar" style="width:50%; margin-left:20%" >
+    <img src="../../staff/img/'.$gambar.'" class="rounded gambar" style="width:15%; margin: auto"; >
+    <h5><b>Pertanyaan: </b></h5>
      <p style="font-family: nunito sans;">'.$qns.'</p>';
   }
 }
+
   $q1= mysqli_query($conn, "SELECT * FROM ujian WHERE eid = '$eid'");
   $row = mysqli_fetch_assoc($q1);
   $total = $row['total'];
+
   $q = mysqli_query($conn, "SELECT * FROM pilihan_jawaban WHERE qid = '$qid'");
+
   echo '<form action="update.php?q=quiz&step=2&eid='.$eid.'&n='.$n.'&t='.$total.'&qid='.$qid.'" method="POST" class="form-horizontal">';
 
-  while($row=mysqli_fetch_array($q) )
+  while($row = mysqli_fetch_assoc($q) )
 {
 $option=$row['option'];
 $optionid=$row['optionid'];
