@@ -37,7 +37,7 @@ $data = mysqli_query($conn, "SELECT * FROM ujian WHERE id_staff = '$id_staff' ")
   <script src="asset/data/js/bootstrap.min.js"></script>
 
   <!-- Material Icon Font -->
-  <link rel="stylesheet" type="text/css" href="asset/font/css/fontello.cs">
+  <link rel="stylesheet" type="text/css" href="asset/font/css/fontello.css">
 
 
 
@@ -48,7 +48,13 @@ $data = mysqli_query($conn, "SELECT * FROM ujian WHERE id_staff = '$id_staff' ")
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<style>
+  .tombol
+  {
+    width: 80px;
 
+  }
+</style>
 </head>
 
 <body>
@@ -137,8 +143,8 @@ $data = mysqli_query($conn, "SELECT * FROM ujian WHERE id_staff = '$id_staff' ")
                   <td><?= $dt["matpel"]; ?></td>
                   <td><?= $dt["judul"]; ?></td>
                   <td><?= $dt["kelas"]; ?></td>
-                  <td><a href="hapus.php?id=<?= $dt['eid']; ?>" onclick="return confirm('Yakin anda ingin menghapusnya');"><i class="icon-trash" title="Hapus Data"></i></a>&nbsp;|&nbsp;
-                    <a href="data.php?id=<?= $dt['eid']; ?>" title="Lihat Data Kelola"><i class="icon-eye"></i>asd</a></td>
+                  <td><a href="hapus.php?id=<?= $dt['eid']; ?>" class="btn btn-danger tombol" onclick="return confirm('Yakin anda ingin menghapusnya');"><i class="icon-trash" title="Hapus Data"></i></a>&nbsp;|&nbsp;
+                    <a href="data.php?id=<?= $dt['eid']; ?>" class="btn btn-info tombol" title="Lihat Data Kelola"><i class="icon-eye"></i></a></td>
                 </tr>
               </tbody>
               <?php $x++; ?>
