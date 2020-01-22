@@ -104,7 +104,7 @@ require "fungsi.php";
          </div>
            <form method="POST">
              <div class="form-group">
-               <button class="btn btn-primary" name="add-quiz">Add Quiz</button>
+               <button class="btn btn-primary mt-2" name="add-quiz">Add Quiz</button>
              </div>
            </form>
        </div>
