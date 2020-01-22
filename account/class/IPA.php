@@ -218,8 +218,8 @@ $awalData = ($jumlahDataPerHalaman * $HalamanAktif) - $jumlahDataPerHalaman;
         if ($rowcount == 0) {
           echo '<tbody><tr><td>' . $x++ . '</td><td>' . $matpel . '</td><td>' . $kelas . '</td>
                     <td><b><a href="view.php?q=quiz&step=2&n=1&eid=' . $eid . '"class="pull-right btn sub1" style="margin:0px;background:">
-                    <span class="icon-login" title="Kerjakan Soal" aria-hidden="true"></span>&nbsp;
-                    <i title="Kerjakan Soal"><b>Start</i></b></td></tr></tbody>';
+                    <span class="icon-login" aria-hidden="true"></span>&nbsp;
+                    <b title="Kerjakan Soal">Kerjakan Soal</b></td></tr></tbody>';
         } else {
           echo '<tbody><tr><td>' . $x++ . '</td><td>' . $matpel . '</td><td>' . $kelas . '</td><td><b><label class="pull-btn sub1" style="margin:0px;background:">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><i class="icon-ok" style="color:green" ></i></b>&nbsp;| &nbsp;<a href="view.php?q=result&eid=' . $eid . '"><i class="icon-eye" title="Lihat Nilai"></i></a></td></tr></tbody>';
         }
@@ -280,7 +280,7 @@ $awalData = ($jumlahDataPerHalaman * $HalamanAktif) - $jumlahDataPerHalaman;
       $q = mysqli_query($conn, "SELECT score FROM nilai WHERE eid = '$eid' AND NIS = '$NIS'");
       $rowcount = mysqli_num_rows($q);
       if ($rowcount == 0) {
-        echo '<tbody><tr><td>' . $x++ . '</td><td>' . $matpel . '</td><td>' . $kelas . '</td><td><b><a href="view.php?q=quiz&step=2&n=1&eid=' . $eid . '"class="pull-right btn sub1" style="margin:0px;background:"><span class="icon-login" title="Kerjakan Soal" aria-hidden="true"></span>&nbsp;<i title="Kerjakan Soal"><b>Start</i></b></td></tr></tbody>';
+        echo '<tbody><tr><td>' . $x++ . '</td><td>' . $matpel . '</td><td>' . $kelas . '</td><td><b><a href="view.php?q=quiz&step=2&n=1&eid=' . $eid . '"class="pull-right btn sub1" style="margin:0px;background:"><span class="icon-login" title="Kerjakan Soal" aria-hidden="true"></span>&nbsp;<b title="Kerjakan Soal">Kerjakan Soal</b></td></tr></tbody>';
       } else {
         echo '<tbody><tr><td>' . $x++ . '</td><td>' . $matpel . '</td><td>' . $kelas . '</td><td><b><label class="pull-btn sub1" style="margin:0px;background:">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><i class="icon-ok" style="color:green"></i></b>&nbsp;| &nbsp;<a href="view.php?q=result&eid=' . $eid . '"><i class="icon-eye" title="Lihat Nilai"></i></a></td></tr></tbody>';
       }
@@ -341,7 +341,7 @@ $awalData = ($jumlahDataPerHalaman * $HalamanAktif) - $jumlahDataPerHalaman;
       $q = mysqli_query($conn, "SELECT score FROM nilai WHERE eid = '$eid' AND NIS = '$NIS'");
       $rowcount = mysqli_num_rows($q);
       if ($rowcount == 0) {
-        echo '<tbody><tr><td>' . $x++ . '</td><td>' . $matpel . '</td><td>' . $kelas . '</td><td><b><a href="view.php?q=quiz&step=2&n=1&eid=' . $eid . '"class="pull-right btn sub1" style="margin:0px;background:"><span class="icon-login" title="Kerjakan Soal" aria-hidden="true"></span>&nbsp;<i title="Kerjakan Soal"><b>Start</i></b></td></tr></tbody>';
+        echo '<tbody><tr><td>' . $x++ . '</td><td>' . $matpel . '</td><td>' . $kelas . '</td><td><b><a href="view.php?q=quiz&step=2&n=1&eid=' . $eid . '"class="pull-right btn sub1" style="margin:0px;background:"><span class="icon-login" title="Kerjakan Soal" aria-hidden="true"></span>&nbsp;<b title="Kerjakan Soal">Kerjakan Soal</b></td></tr></tbody>';
       } else {
         echo '<tbody><tr><td>' . $x++ . '</td><td>' . $matpel . '</td><td>' . $kelas . '</td><td><b><label class="pull-btn sub1" style="margin:0px;background:">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><i class="icon-ok" style="color:green"></i></b>&nbsp;| &nbsp;<a href="view.php?q=result&eid=' . $eid . '"><i class="icon-eye" title="Lihat Nilai"></i></a></td></tr></tbody>';
       }
