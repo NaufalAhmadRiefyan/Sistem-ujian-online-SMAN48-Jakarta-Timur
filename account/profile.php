@@ -34,80 +34,79 @@ $nama = $row['nama_siswa'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Online-Exam</title>
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Online-Exam</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="asset/js/jquery.min.js"></script>
+  <!-- jQuery library -->
+  <script src="asset/js/jquery.min.js"></script>
 
-    <!-- Popper JS -->
-    <script src="asset/js/popper.min.js"></script>
+  <!-- Popper JS -->
+  <script src="asset/js/popper.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="asset/js/bootstrap.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="asset/js/bootstrap.min.js"></script>
 
-    <!-- Material Icon Font -->
-    <link rel="stylesheet" type="text/css" href="css/material-design-iconic-font.min.css">
+  <!-- Material Icon Font -->
+  <link rel="stylesheet" type="text/css" href="asset/font/css/fontello.css">
 
-    <!-- CSS Style -->
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <!-- CSS Style -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <!-- Bootrstrap CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Bootrstrap CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 
-
-   
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 
   </head>
  
-  <body style="min-height: 100px; background-color: #AECAC9">
-     <!-- navigation menu -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <style>
+  p {
+    font-family: nunito sans;
+  }
+</style>
+
+<body style="max-height: 100px">
+  <!-- navigation menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top" style="color: white">
     <a class="navbar-brand" href="index.php"><img src="asset/img/hogwart.png" style="width: 40px; height: 40px;"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">Home</a>
-            </li>
-            
-
-            <li class="nav-item dropdown">
-              <a href="course.php" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Course</a>
-              <div class="dropdown-menu">
-                <a href="class/ipa.php" class="dropdown-item">IPA</a>
-                <a href="class/ips.php" class="dropdown-item">IPS</a>
-              </div>
-            </li>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.php">Home</a>
+        </li>
 
 
-            <li class="nav-item dropdown">
-              <a href="" class="nav-link dropdown-toggle active" id="navbardrop" data-toggle="dropdown"><?= $_SESSION['nama_siswa'];?></a>
-              <div class="dropdown-menu">
-                <a href="profile.php?q=<?= $_SESSION['NIS'];?>" class="dropdown-item">Ubah Password</a>
-                <a href="logout.php" class="dropdown-item">Logout</a>
-              </div>
-            </li>
+        <li class="nav-item dropdown">
+          <a href="course.php" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Course</a>
+          <div class="dropdown-menu">
+            <a href="class/ipa.php" class="dropdown-item">IPA</a>
+            <a href="class/ips.php" class="dropdown-item">IPS</a>
+          </div>
+        </li>
 
-        </ul>
+
+        <li class="nav-item dropdown active">
+          <a href="" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown"><?= $_SESSION['nama_siswa']; ?></a>
+          <div class="dropdown-menu">
+            <a href="profile.php?q=<?= $_SESSION['NIS']; ?>" class="dropdown-item">Ubah Password</a>
+            <a href="logout.php" class="dropdown-item">Logout</a>
+          </div>
+        </li>
+
+      </ul>
     </div>
-</nav>
+  </nav>
 
 
 
