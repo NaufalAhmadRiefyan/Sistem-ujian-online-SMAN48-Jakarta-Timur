@@ -1,124 +1,242 @@
-html {
-	position: relative;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-body{
-	background-image: url(../account/asset/img/2.jpg);
-	background-repeat: repeat;
-	background-color: rgb(255, 255, 255);
-    margin-bottom: 120px;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.main-image
+
+/*Index*/
+.card
 {
-	height: 250px;
-	margin: 10% 39% ;
+	position: absolute;
+	width: 400px;
+	height: 380px;
+	right: 31%;
+	top: 180px;
+	background-color: #F1F3F6;
+	border: transparent;
+	border-radius: 10px;
+	z-index: 1;
+	transition: .7s;
 }
 
-.main h3
+.card:hover
 {
-	position: relative;
-	bottom: 80px;
-	left: 20px;
+	box-shadow: 40px 40px 40px rgba(55, 84, 170, 0.1), 
+	-10px -10px 50px rgba(255, 255, 255, 0.69);
 }
 
-.button
+.card .hogwart-pic
 {
 	position: relative;
-	left: 250px;
+	left: 110px;
+	bottom: 200px;
 	width: 180px;
-	margin-left: 100px;
-	margin-top: -80px;
-	border-radius: 12px;
+	margin-bottom: -200px;
+	z-index: 1;
 }
-
-
-
-.button:first-child 
+.card form
 {
-	background-color: rgb(34, 91, 182);
-	border: none;
-	transition: .5s;
-}
-
-.button:first-child:hover
-{
-	background-color: rgb(14, 36, 70);
-	border: none;
-	color: rgb(255, 255, 255);	
-}
-
-.button:last-child 
-{
-	background-color: rgb(5, 22, 117);
-	border: none;
-	transition: .5s;
-}
-
-.button:last-child:hover
-{
-	background-color: rgb(3, 112, 185);
-	border: none;
-}
-
-/* portrait phone */
-@media (max-width: 575.98px) {  
-	body{
-		position: relative;
-		background-image: url(../account/asset/img/2.jpg);
-		background-repeat: none;
-		background-color: #A6BDB1;
-		margin-bottom: 120px;
-	}
-	.main-image
-	{
-		height: 100px;
-		margin: 10% 39% ;
-	}
+	position: absolute;
+	width: 350px;
+	margin-top: 60px;
+	margin-left: 25px;
+	font-family: 'Open Sans', sans-serif;
 	
-	.main h3:first-child
-	{
-		font-size: 24px;
-		font-weight: bold;
-		position: relative;
-		top: 50px;
-		left: 20px;
-	}
+}
 
-	.main h3:last-child
-	{
-		font-size: 24px;
-		font-weight: bold;
-		position: relative;
-		top: 50px;
-		left: 20px;
-	}
+.card form #inputField
+{
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	border: transparent;
+	box-shadow: 3px 2px 8px rgba(105, 104, 104, 0.685);
+}
+
+.card h1
+{
+	position: relative;
+	bottom: 3px;
+	font-size: 28px;
+}
+
+.card form h1
+{
+	position: relative;
+	margin-bottom: -60px;
+	bottom: 60px;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.card button
+{
+	border-radius: 10px;
+	width: 100%;
+	box-shadow: 3px 2px 8px rgba(105, 104, 104, 0.685);
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Index*/
+.card
+{
+	position: absolute;
+	width: 400px;
+	height: 380px;
+	right: 31%;
+	top: 180px;
+	background-color: #F1F3F6;
+	border: transparent;
+	border-radius: 10px;
+	z-index: 1;
+	transition: .7s;
+}
+
+.card:hover
+{
+	box-shadow: 40px 40px 40px rgba(55, 84, 170, 0.1), 
+	-10px -10px 50px rgba(255, 255, 255, 0.69);
+}
+
+.card .hogwart-pic
+{
+	position: relative;
+	left: 110px;
+	bottom: 200px;
+	width: 180px;
+	margin-bottom: -200px;
+	z-index: 1;
+}
+.card form
+{
+	position: absolute;
+	width: 350px;
+	margin-top: 60px;
+	margin-left: 25px;
+	font-family: 'Open Sans', sans-serif;
 	
-	.button
-	{
-		position: relative;
-		left: -70px;
-		top: 150px;
-		width: 220px;
-		height: 40px;
-		margin-top: -10px;
-		border-radius: 12px;
-	}
+}
 
-	.button:first-child 
-	{
-		background-color: rgb(43, 77, 133);
-		border: none;
-		transition: .5s;
-		top: 100px;
-	}
+.card form #inputField
+{
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	border: transparent;
+	box-shadow: 3px 2px 8px rgba(105, 104, 104, 0.685);
+}
 
-	.button:last-child 
-	{
-		background-color: rgb(5, 22, 117);
-		border: none;
-		transition: .5s;
-		position: relative;
-	}
+.card h1
+{
+	position: relative;
+	bottom: 3px;
+	font-size: 28px;
+}
+
+.card form h1
+{
+	position: relative;
+	margin-bottom: -60px;
+	bottom: 60px;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.card button
+{
+	border-radius: 10px;
+	width: 100%;
+	box-shadow: 3px 2px 8px rgba(105, 104, 104, 0.685);
 }
 
 
@@ -134,15 +252,6 @@ body{
 	margin: 2px;
 	position: relative;
 }
-
-.login{
-	box-shadow: -9px 9px 6px rgb(221, 216, 209);
-	border-radius: 15px;
-	width: 1000px;
-	height: 350px;
-	margin-bottom: 100px;
-	background-color: rgb(255, 255, 255);
-}
 .container
 {
 	margin-top: 50px;
@@ -153,4 +262,8 @@ body{
 	position: relative;
 	top: 10px;
 }
-
+footer
+{
+	position: relative;
+	bottom: 0;
+}
