@@ -47,31 +47,29 @@ $nama_siswa = $_SESSION['nama_siswa'];
     <!-- CSS Style -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"> 
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-  
+     <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <style>
-    .card-body{
-      font-family: nunito sans;
-
-    }
-    .input{
-        font-family: nunito sans;
+    body
+    {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #FFFFFF;
     }
     .gambar{
       height: 10%;
     }
+
+    .review
+    {
+      position: relative;
+      left: 15%;
+      width: 800px;
+
+      box-shadow: 3px 0px 10px rgba(0, 0, 1, 0.5);
+    }
   </style>
-  <body style="background-color: rgba(0, 90, 20, .4);">
+  <body>
    
   <!-- navigation menu -->
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -121,7 +119,7 @@ $nama_siswa = $_SESSION['nama_siswa'];
   $n = @$_GET['n'];
   $eid = @$_GET['eid'];
   $q = mysqli_query($conn, "SELECT * FROM pertanyaan_soal WHERE eid = '$eid' AND sn = '$n'");
-  echo '<div class="container mt-3"><div class="card-body col-md-12" style="background-color:#FFFFFF; border: 3px solid black; border-radius: 10px 10px px 5px">';
+  echo '<div class="container mt-3"><div class="card-body col-md-12" style="background-color:#FFFFFF; box-shadow: 3px 0px 10px rgba(0, 0, 1, 0.5); border-radius: 10px 10px px 5px">';
   while($row = mysqli_fetch_assoc($q))
   {
     $gambar = $row['gambar'];
@@ -129,12 +127,12 @@ $nama_siswa = $_SESSION['nama_siswa'];
     $qid = $row['qid'];
     if(!$gambar){
       echo '<b>Soal Ke &nbsp;'.$n.'&nbsp;</b></br>
-     <p style="font-family: nunito sans;">'.$qns.'</p>';
+     <p>'.$qns.'</p>';
     }else{
     echo '<b>Soal Ke &nbsp;'.$n.'&nbsp;</b></br>
     <img src="../../staff/img/'.$gambar.'" class="rounded gambar" style="width:15%; margin: auto"; >
     <h5><b>Pertanyaan: </b></h5>
-     <p style="font-family: nunito sans;">'.$qns.'</p>';
+     <p>'.$qns.'</p>';
   }
 }
 
@@ -150,7 +148,7 @@ $nama_siswa = $_SESSION['nama_siswa'];
 {
 $option=$row['option'];
 $optionid=$row['optionid'];
-echo'<input type="radio" class="input" name="jawaban" id="jawaban" value="'.$optionid.'" style="font-family: nunito sans;">'.$option.'<br /><br />';
+echo'<input type="radio" class="input" name="jawaban" id="jawaban" value="'.$optionid.'">'.$option.'<br /><br />';
 }
   echo'<br/><button type="submit" class="btn btn-primary"><span class="zmdi zmdi-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div></div>';
 //header("location:dash.php?q=4&step=2&eid=$id&n=$total");
@@ -169,10 +167,9 @@ echo'<input type="radio" class="input" name="jawaban" id="jawaban" value="'.$opt
   echo '<br><br><div class="container">
          <div class="row">
            <div class="col-12">
-             <div class="card">
-                 <div class="card bg-light"> 
+             <div class="card review">
                  <div class="card-body text-center">
-                 <h3 style="font-family:sash"><b>Hasil Jawaban</b></h3>
+                 <h3><b>Hasil Jawaban</b></h3>
                  <hr style="border-top:1px solid #666; " class="col-5">
                  </div>
                  <div class="card-body">';
@@ -219,22 +216,22 @@ while($row = mysqli_fetch_assoc($opti)){
     $r = $row['right'];
       echo '  
       
-                <div class=" text-center"><h3 style="font-family:sash">Ujian Selesai !</h3></div>
+                <div class=" text-center"><h3>Ujian Selesai !</h3></div>
                 <hr style="border-top: 1px solid #666; width:200px"><br>
                 <div class="card-body">
-                    <h5 class="text-center" style="font-family:sash">Anda Telah Menyelesaikan Soal !</h5>
-                    <h6 class="text-center" style="font-family:sash">Nilai yang diraih     = '.$s.'/'.$qa.'</h6>
+                    <h5 class="text-center">Anda Telah Menyelesaikan Soal !</h5>
+                    <h6 class="text-center">Nilai yang diraih     = '.$s.'/'.$qa.'</h6>
                  </div>
                   
                   <form action="../index.php">
                   <div class="form-group">
-                    <button class="form-control col-md-6 offset-md-3 btn btn-outline-success" style="font-family:sash">Selesai</button>
+                    <button class="form-control col-md-6 offset-md-3 btn btn-outline-success">Selesai</button>
                   </div>
                   </form>
               </div>
           </div>
         </div>
-      </div></div>';
+      </div>';
                   }
        }
  
