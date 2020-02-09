@@ -40,10 +40,16 @@ $username = $_SESSION['username'];
     <!-- Material Icon Font -->
     <link rel="stylesheet" type="text/css" href="asset/font/css/fontello.css">
 
-  
-   
-
+     <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
+
+  <style>
+    body
+    {
+      font-family: 'Open Sans', sans-serif;
+    }
+  </style>
   <body>
    
     <!-- Navbar -->
@@ -103,8 +109,7 @@ $username = $_SESSION['username'];
   <!-- tampilan Data -->
    <div class="container">
     <div class="row">
-      <div class="col-md">
-        <div class="form-group">
+      <div class="col">
          <ul>
            
              <?php 
@@ -116,17 +121,16 @@ $username = $_SESSION['username'];
               $matpel = $row['matpel'];
               $total = $row['total'];
               $date = date($row['date']);
-              echo "Penulis &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp: ". $username."<br/>";
+              echo "Guru &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp: ". $username."<br/>";
               echo "Mata Pelajaran : ". $matpel."</br>";
               echo "Kelas  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp: ". $kelas."<br/>";
               echo "Judul Soal &nbsp &nbsp &nbsp &nbsp&nbsp: ".$judul."</br>"; 
               echo "Jumlah Soal &nbsp &nbsp &nbsp: ".$total."</br>";
-              echo "Dibuat sejak&nbsp &nbsp &nbsp&nbsp: ".$date."</br>"; 
+              echo "Dibuat sejak &nbsp &nbsp&nbsp: ".$date."</br>"; 
              }
             ?>
            
          </ul>
-        </div>
       </div>
     </div>     
    </div>
@@ -139,8 +143,39 @@ $username = $_SESSION['username'];
            if(@$_GET['id'] = '$id'){
 
            $q = mysqli_query($conn, "SELECT * FROM nilai WHERE eid = '$id'");
+           $data = mysqli_num_rows($q);
+
           } 
           ?>
+
+
+          <?php if($data == 0): ?> 
+
+             <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>No.</th>
+                        <th>NIS</th>
+                        <th>Nama Peserta Ujian </th>
+                        <th>Nilai</th>
+                      </tr>
+                    </thead>
+                  
+                    <tbody>
+                    <tr>
+                     <td colspan="10"><h2 class="text-center mt-3">Maaf Data tidak ditemukan !</h2></td>
+                    </tr>
+                  </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          <?php else: ?>
+         
           <div class="container">
               <div class="row">
                 <div class="col-md-12">
@@ -149,11 +184,10 @@ $username = $_SESSION['username'];
                       <tr>
                         <th>No.</th>
                         <th>NIS</th>
-                        <th>Nama</th>
+                        <th>Nama Peserta Ujian </th>
                         <th>Nilai</th>
                       </tr>
                     </thead>
-          
                   <?php $x = 1; ?>
                   <?php foreach($q as $nama): ?>
                     <tbody>
@@ -176,17 +210,20 @@ $username = $_SESSION['username'];
               </div>
             </div>
 
-            <br>
+             <?php endif; ?>
 
+            <br>
             <div class="container" style="min-height:80px">
               <div class="row">
                 <div class="col-md-2"> 
+                  <?php if($data === 0) : ?>
+                    <a href="cetak.php?id=<?= $id;?>" class="btn btn-info disabled" target="blank"><i class="icon-download"></i>Download</a>
+                  <?php else: ?>
                     <a href="cetak.php?id=<?= $id;?>" class="btn btn-info" target="blank"><i class="icon-download"></i>Download</a>
+                  <?php endif;?>
                 </div>
               </div>
             </div>
-
-
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
