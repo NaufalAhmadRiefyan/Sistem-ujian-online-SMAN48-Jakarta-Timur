@@ -56,14 +56,17 @@ if(isset($_POST['submit'])){
     <!-- CSS Style -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
    
+  </head>
 
+  <style>
+    body
+    {
+      font-family: 'Open Sans', sans-serif;
+    }
+  </style>
   </head>
   <body style="min-height: 700px;">
 
@@ -110,15 +113,15 @@ if(isset($_POST['submit'])){
               <div class="row">
                 <div class="col-md-12">
                     <form method="POST">
-                      <div class="form-group col-md-5 offset-md-4" style="background-color: rgba(255,255,255,.7); font-family: system-ui;">
-                      <h1 class="text-center" style="background-color: rgba(255,255,255,.8); font-family: system-ui;">Ubah Password</h1>
+                      <div class="form-group col-md-5 offset-md-4" style="background-color: rgba(255,255,255,.7); ">
+                      <h1 class="text-center" style="background-color: rgba(255,255,255,.8); ">Ubah Password</h1>
                       <hr style="width: 300px; border-radius: 2px; border-color: black">
 
-                      <h5 style="width: 100%;background-color: rgba(255,255,255,.8);font-family: system-ui;">Nama:</h5>
+                      <h5 style="width: 100%;background-color: rgba(255,255,255,.8);">Nama:</h5>
                       <input type="text" disabled="" class="form-control" style="width: 100%;" value="<?= $nama; ?>"><br>
 
 
-                      <h5 style="width: 100%;background-color: rgba(255,255,255,.8);font-family: system-ui;">username:</h5>
+                      <h5 style="width: 100%;background-color: rgba(255,255,255,.8);">username:</h5>
                       <input type="text" disabled="" class="form-control" style="width: 100%;" value="<?= $username; ?>"><br>
 
 
