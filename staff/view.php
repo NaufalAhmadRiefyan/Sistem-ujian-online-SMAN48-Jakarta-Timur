@@ -39,16 +39,14 @@ $data = mysqli_query($conn, "SELECT * FROM ujian WHERE id_staff = '$id_staff' ")
   <!-- Material Icon Font -->
   <link rel="stylesheet" type="text/css" href="asset/font/css/fontello.css">
 
-
-
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
 <style>
+  body
+  {
+    font-family: 'Open Sans', sans-serif;
+  }
   .tombol
   {
     width: 80px;
@@ -123,7 +121,7 @@ $data = mysqli_query($conn, "SELECT * FROM ujian WHERE id_staff = '$id_staff' ")
     <div class="row">
       <div class="col-lg">
         <div class="table-responsive-lg">
-          <table class="table table-striped">
+          <table class="table table-hover">
             <thead>
               <tr>
                 <th>No</th>
