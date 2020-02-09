@@ -62,14 +62,14 @@ $nama = $row['nama_siswa'];
   <!-- Bootrstrap CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
   </head>
  
   <style>
   p {
-    font-family: nunito sans;
+    font-family: 'Open Sans', sans-serif;
   }
 </style>
 
@@ -117,15 +117,15 @@ $nama = $row['nama_siswa'];
               <div class="row">
                 <div class="col-md-12">
                     <form method="POST">
-                      <div class="form-group col-md-5 offset-md-4" style="background-color: rgba(255,255,255,.7); font-family: system-ui;">
-                      <h1 class="text-center" style="font-family: system-ui;">Ubah Password</h1>
+                      <div class="form-group col-md-5 offset-md-4" style="background-color: rgba(255,255,255,.7);">
+                      <h1 class="text-center" style="">Ubah Password</h1>
                       <hr style="width: 300px; border-radius: 2px; border-color: black">
 
-                      <h5 style="width: 100%;font-family: system-ui;">Nama:</h5>
+                      <h5 style="width: 100%;">Nama:</h5>
                       <input type="text" disabled="" class="form-control" style="width: 100%;" value="<?= $nama; ?>"><br>
                       <input type="hidden" name="id" value="">
 
-                      <h5 style="width: 100%;font-family: system-ui;">NIS:</h5>
+                      <h5 style="width: 100%;">NIS:</h5>
                       <input type="text" disabled="" class="form-control" style="width: 100%;" value="<?= $NIS; ?>"><br>
 
 
