@@ -43,19 +43,32 @@ if (!isset($_SESSION['nama_siswa'])) {
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+   
+  </head>
 
-</head>
-<style>
-  p {
-    font-family: nunito sans;
-  }
+   <style>
+           html,
+body {
+   margin:0;
+   padding:0;
+   height: 100px;
+   font-family: 'Open Sans', sans-serif;
+}
+
+.carousel-fade
+{
+  height: 500px;
+}
+
+.carousel-caption
+{
+  margin-bottom: 90px
+}
+
 </style>
+</head>
 
 <body style="max-height: 100px">
   <!-- navigation menu -->
@@ -95,64 +108,46 @@ if (!isset($_SESSION['nama_siswa'])) {
 
 
   <!-- Caorusel -->
-  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="asset/img/4.jpg" alt="First slide" style="background-size: cover">
-        <div class="carousel-caption">
-          <h4 class="col-xs-12" style="color:White; font-family: system-ui;">Welcome to Online Exam</h4>
-          <p style="font-family: system-ui;">Select Your Course</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="asset/img/11.jpg" alt="Second slide">
-        <div class="carousel-caption">
-          <h4 class="col-xs-12" style="color:White; font-family: system-ui;">Welcome to Online Exam</h4>
-          <p style="font-family: system-ui;">Select Your Course</p>
-        </div>
+       <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" >
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="../account/asset/img/4.jpg" alt="First slide" style="background-size: cover">
+      <div class="carousel-caption">
+        <h4 class="col-xs-12" style="color:White; font-family: system-ui;">Welcome to Online Exam</h4>
+        <p style="font-family: system-ui;">Select Your Course</p>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../account/asset/img/5.png" alt="Second slide">
+      <div class="carousel-caption">
+        <h4 class="col-xs-12" style="color:White; font-family: system-ui;">Welcome to Online Exam</h4>
+        <p style="font-family: system-ui;">Select Your Course</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../account/asset/img/11.jpg" alt="Second slide">
+      <div class="carousel-caption">
+        <h4 class="col-xs-12" style="color:White; font-family: system-ui;">Welcome to Online Exam</h4>
+        <p style="font-family: system-ui;">Select Your Course</p>
+      </div>
+    </div>
   </div>
-  <!-- end Carousel -->
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+        <!-- end Carousel -->
 
-
-  <section class="about" id="about" style="background-image: url(../img/background.jpg);">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <br>
-          <hr style="border-top: 2px solid #666; width: 150px">
-        </div>
-
-
-        <div class="col-md-6" style="padding-top: 20px;">
-          <h5 style="font-family: system-ui; color: #AFA7A7"><b>Online Exam</b></h5>
-          <p style="color: #FFFFFF; text-align: justify">adalah sebuah layanan ujian <i>online</i>
-            yang mendukung proses belajar mengajar oleh dosen dan siswa serta memberikan kemudahan dalam
-            mengerjakan soal-soal ujian.</p>
-        </div>
-
-        <div class="col-md-6">
-          <h4 style="font-family: 'ABeeZee'; color: #AFA7A7; padding-top: 50%">Hubungi Kami<i class="icon-chat"></i></h4>
-          <p style="color: #FFFFFF">Jl. Keramat Pangeran Syarif, Lubang Buaya - Jakarta Timur </p>
-          <p style="color: #FFFFFF">Email: <span style="color: #6B94BC">examonline@gmail.com</span></p>
-        </div>
-        <br><br>
-      </div>
-    </div>
-  </section>
 
   <script src="asset/js/jquery-3.3.1.min.js"></script>
   <script type="asset/js/script.js"></script>
