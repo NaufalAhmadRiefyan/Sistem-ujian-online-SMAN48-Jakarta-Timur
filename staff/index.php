@@ -73,6 +73,9 @@ if (isset($_POST['submit'])) {
   <!-- CSS Style -->
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -82,36 +85,63 @@ if (isset($_POST['submit'])) {
 
   <style>
     body {
+      height: 50px;
       background-image: none;
       margin-bottom: 530px;
+      font-family: 'Open Sans', sans-serif;
     }
+
+    label
+    {
+      font-size: 16px;
+    }
+
+    .form-login
+    {
+      margin-top: 150px;
+      margin-left: 150px;
+      border-radius: 15px;
+      width: 1000px;
+      height: 350px;
+      margin-bottom: 100px;
+      background-color: rgb(255, 255, 255);
+      transition: .6s;
+    }
+
+    .form-login:hover
+    {
+      box-shadow: -9px 9px 6px rgb(221, 216, 209);  
+    }
+
+
   </style>
 </head>
 
 <body>
-  <div class="container form-login">
+  
+<div class="container form-login">
     <div class="row login">
       <div class="col-md-6 ">
         <div class="panel panel-primary">
-          <div class="panel-heading col-sm-11" style="font-family: system-ui;">
-            <h3 class="text-center" style="color: black"><i class="icon-user"></i>Log in</h3>
+          <div class="panel-heading col" style="font-family: system-ui;">
+            <h3 class="text-center" style="color: black; font-size: 28px"><i class="icon-user"></i>Log in</h3>
           </div>
           <div class="panel-body">
-            <form action="" method="POST">
+            <form action="" method="POST" style="font-size: 18px">
               <hr style="width: 180px; border-top: 2px solid #999; margin-left: 130px;">
-              <div class="form-group col-md-11 ">
-                <label for="Username">Username:</label>
+              <div class="form-group col">
+                <label for="Username" class="mb-1">Username:</label>
                 <input type="text" name="username" id="username" class="form-control" placeholder="Masukkan Username" required="" autofocus="" autocomplete="off" style="border-radius: 15px">
               </div>
 
-              <div class="form-group col-md-11 ">
-                <label for="Password">Password:</label>
+              <div class="form-group col">
+                <label for="Password" class="mb-1">Password:</label>
                 <input type="password" name="password" id="password" placeholder="Masukkan Password" class="form-control" required="" autocomplete="off" style="border-radius: 15px">
               </div>
 
-              <div class="form-group col-md-11">
+              <div class="form-group col">
                 <button type="submit" name="submit" id="submit" class="btn btn-primary form-control" style="border-radius:15px;">Masuk</button>
-                <a href="../index.php" class="back-button btn btn-link">Kembali</a>
+                <a href="../index.php" class="back-button btn btn-link" style="text-decoration: none">Kembali</a>
               </div>
 
             </form>
@@ -122,32 +152,9 @@ if (isset($_POST['submit'])) {
     </div>
   </div>
 
-
-  <footer class="about" id="about" style="background-image: url(../img/background.jpg); position: absolute; width: 100%; bottom:0; ">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <br>
-        </div>
-
-
-        <div class="col-md-6" style="padding-top: 20px;">
-          <h5 style="font-family: system-ui; color: #AFA7A7"><b>Online Exam</b></h5>
-          <p style="color: #FFFFFF; text-align: justify">adalah sebuah layanan ujian <i>online</i>
-            yang mendukung proses belajar mengajar oleh dosen dan siswa serta memberikan kemudahan dalam
-            mengerjakan soal-soal ujian.</p>
-        </div>
-
-        <div class="col-md-6">
-          <h4 style="font-family: 'ABeeZee'; color: #AFA7A7; padding-top: 50%">Hubungi Kami<i class="icon-chat"></i></h4>
-          <p style="color: #FFFFFF">Jl. Keramat Pangeran Syarif, Lubang Buaya - Jakarta Timur </p>
-          <p style="color: #FFFFFF"><span style="color: #FFFFFF">Email: </span><span style="color: #6B94BC">examonline@gmail.com</span></p>
-        </div>
-        <br><br>
-      </div>
-    </div>
-  </footer>
+  
 
 </body>
 
 </html>
+
