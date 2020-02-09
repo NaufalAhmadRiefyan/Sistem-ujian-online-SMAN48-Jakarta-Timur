@@ -177,16 +177,16 @@ function hapus_guru($id){
 function hapus_soal($id){
 	global $conn;
 
-
-	$question = mysqli_query($conn, "SELECT * FROM pertanyaan_soal WHERE eid = '$id' ");
-	while($row = mysqli_fetch_assoc($question)){
-		$qid = $row['qid'];
+	//ambil qid
+	$row = mysqli_query($conn, "SELECT * FROM pertanyaan_soal WHERE eid = '$id'");
+	while($row_qid = mysqli_fetch_assoc($row)){
+		$qid = $row_qid['qid'];	
 		mysqli_query($conn, "DELETE FROM jawaban_soal WHERE qid = '$qid' ");
 		mysqli_query($conn, "DELETE FROM pilihan_jawaban WHERE qid = '$qid' ");
-		mysqli_query($conn, "DELETE FROM pertanyaan_soal WHERE qid = '$qid' ");
 	}
+	mysqli_query($conn, "DELETE FROM nilai WHERE eid = '$id' ");
+	mysqli_query($conn, "DELETE FROM pertanyaan_soal WHERE eid = '$id' ");
 	mysqli_query($conn, "DELETE FROM ujian WHERE eid = '$id' ");
-
 	return mysqli_affected_rows($conn);
 }
 
