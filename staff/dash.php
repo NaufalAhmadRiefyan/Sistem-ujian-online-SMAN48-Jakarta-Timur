@@ -35,6 +35,9 @@ require "fungsi.php";
     <!-- Material Icon Font -->
     <link rel="stylesheet" type="text/css" href="css/material-design-iconic-font.min.css">
 
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
     
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -49,7 +52,19 @@ body {
    margin:0;
    padding:0;
    height: 100px;
+   font-family: 'Open Sans', sans-serif;
 }
+
+.carousel-fade
+{
+  height: 500px;
+}
+
+.carousel-caption
+{
+  margin-bottom: 90px
+}
+
 </style>
 
   </head>
@@ -140,42 +155,6 @@ body {
   </a>
 </div>
         <!-- end Carousel -->
-
-
-
-
-
-<section class="about" id="about" style="background-image: url(../img/background.jpg);">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <br>
-        <hr style="border-top: 2px solid #666; width: 150px">
-      </div>
-
-     
-      <div class="col-md-6" style="padding-top: 20px;">
-        <h5 style="font-family: system-ui; color: #AFA7A7"><b>Online Exam</b></h5>
-        <p style="color: #FFFFFF; text-align: justify">adalah sebuah layanan ujian <i>online</i>
-        yang mendukung proses belajar mengajar oleh dosen dan siswa serta memberikan kemudahan dalam 
-        mengerjakan soal-soal ujian.</p>
-      </div>
-
-        <div class="col-md-6">
-        <h4 style="font-family: 'ABeeZee'; color: #AFA7A7; padding-top: 50%">Hubungi Kami<i class="icon-chat"></i></h4>
-        <p style="color: #FFFFFF">Jl. Keramat Pangeran Syarif, Lubang Buaya - Jakarta Timur </p>
-        <p style="color: #FFFFFF">Email: <span style="color: #6B94BC">examonline@gmail.com</span></p>
-        </div>
-        <br><br>
-    </div>
-  </div>
-</section>
-
-
-
-    
-
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.3.1.min.js"></script>
