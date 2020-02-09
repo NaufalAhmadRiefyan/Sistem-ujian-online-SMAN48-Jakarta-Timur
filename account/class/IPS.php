@@ -45,47 +45,42 @@ $awalData = ($jumlahDataPerHalaman * $HalamanAktif) - $jumlahDataPerHalaman;
 
     <script src="js/style.js"></script>
     
+     <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100px;
+      font-family: 'Open Sans', sans-serif; 
+    }
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
- <style>
-           html,
-body {
-   margin:0;
-   padding:0;
-   height: 100px;
-}
-      .tabel {
-        border-collapse: ;
-        border-spacing:0;
-        width:100%;
-        border: 1px solid #ddd;
-      }
+    .tabel {
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+    }
 
-      footer{
-        position: relative;
-        bottom: 0;
-        margin-top: 100px;
-        width: 100%;
-        height: 100px;
-        background: black;
-      }
+    footer {
+      position: relative;
+      bottom: 0;
+      margin-top: 100px;
+      width: 100%;
+      height: 100px;
+      background: black;
+    }
 
-      .container{
-        min-height: 100%;
-        position: relative;
-      }
+    .container {
+      min-height: 100%;
+      position: relative;
+    }
 
-      .about{
-        position: relative;
-        top: 310px
-      }
-    </style>
-  
+    .about {
+      position: relative;
+      top: 310px
+    }
+  </style>
   </head>
   <body>
    
